@@ -407,15 +407,16 @@ function getZ(percent, targetHeight, extraBaseHeight) {
 }
 
 function topoShape2threeShape(topology, object) {
+	const arcs = object.arcs[0]
 
-	if(object.arcs.length == 0)
+	if(arcs.length == 0)
 		return null;
 
-	var outer = decodeTopoRing(topology, object.arcs[0]);
+	var outer = decodeTopoRing(topology, arcs[0]);
 	var holes = [];
 
-	if(object.arcs.length > 1) {
-		holes = object.arcs.slice(1).map(function(innerRing){
+	if(arcs.length > 1) {
+		holes = arcs.slice(1).map(function(innerRing){
 			return decodeTopoRing(topology, innerRing);
 		});
 	}
