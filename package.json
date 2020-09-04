@@ -20,11 +20,11 @@
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "shapefile": "^0.3.0",
-    "topojson": "^1.6.0",
     "deepcopy": "^0.3.0",
+    "ogr2ogr": "^2.0.1",
     "point-in-polygon": "^0.0.0",
+    "shapefile": "^0.3.0",
     "three": "^0.66.0",
-    "ogr2ogr": "^0.3.0"
+    "topojson": "^1.6.0"
   }
 }
